@@ -1,5 +1,5 @@
 SELECT
-  (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_title'),
+  (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_title') AS page_title,
   COUNT(user_pseudo_id) AS count_of_users,
   COUNT(DISTINCT user_pseudo_id) AS count_of_unique_users,
   ROUND(SAFE_DIVIDE(COUNT(user_pseudo_id),COUNT(DISTINCT user_pseudo_id)),2) AS event_count_per_user
