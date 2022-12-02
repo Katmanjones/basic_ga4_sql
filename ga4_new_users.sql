@@ -6,7 +6,7 @@ SELECT
   #device.category,
   #device.mobile_brand_name,
   #device.operating_system,
-  COUNT(DISTINCT user_pseudo_id)
+  COUNT(DISTINCT user_pseudo_id) AS count_unique_users
 
 FROM `measurelab-ga4.analytics_217052535.events_*` 
 
